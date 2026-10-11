@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ Quest</title>
+    <meta name="description" content="C++ Quest learner platform for BCA/University of Rajasthan C++ preparation" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark"><i data-lucide="sparkles"></i><span>C++</span></div>
+          <div>
+            <p class="eyebrow">your cozy coding corner</p>
+            <h1>C++ Quest</h1>
+          </div>
+        </div>
+
+        <nav id="navMenu" class="nav-menu" aria-label="Primary navigation"></nav>
+
+        <div class="sidebar-card">
+          <div class="mini-label">Daily Goal</div>
+          <div class="goal-row">
+            <span>Study target</span>
+            <strong id="dailyGoalText">60%</strong>
+          </div>
+          <div class="progress-track small">
+            <span id="dailyGoalBar" style="width: 60%"></span>
+          </div>
+          <div class="xp-inline">
+            <span>XP</span>
+            <strong id="xpInline">0</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search-wrap">
+            <span class="icon">⌕</span>
+            <input id="globalSearch" type="search" placeholder="Search lessons, syntax, practice questions, notes..." aria-label="Search topics and content" />
+          </div>
+
+          <div class="topbar-meta">
+            <div class="stat-pill">
+              <span class="muted">Level</span>
+              <strong id="levelPill">1</strong>
+            </div>
+            <div class="stat-pill accent">
+              <span class="muted">Streak</span>
+              <strong id="streakPill">0 days</strong>
+            </div>
+            <div class="avatar-box" aria-label="Profile"><i data-lucide="heart"></i></div>
+          </div>
+        </header>
+
+        <div id="appContent" aria-live="polite"></div>
+      </main>
+    </div>
+
+    <template id="sectionTemplate">
+      <section class="page-section"></section>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
